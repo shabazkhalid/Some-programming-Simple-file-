@@ -1,0 +1,33 @@
+#include <iostream>
+#include<cstdlib>
+using namespace std;
+
+const int s=10;
+int main ()
+{
+        int no[s],v,indx,n;
+        cout<<"enter size of array"<<endl;
+        cin>>n;
+        cout << "enter  the numbers "<<endl;
+        for(indx = 0; indx < n; indx++)
+           cin >>no[indx];
+
+
+       for (indx = 0; indx < n; indx++)
+       {
+           for(v=n;v>indx;v--)
+             if (no[indx]==no[v])
+               {
+                  no[v]=no[v+1];
+                  n=n-1;
+               }
+       }
+
+       for (indx = 0; indx <=n; indx++)
+         {
+            cout << no[indx];
+         }
+         system("pause");
+         return 0;
+}
+

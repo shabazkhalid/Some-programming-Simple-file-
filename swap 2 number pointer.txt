@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int swap(int ,int);
+int main()
+{
+int *ptr;
+int a=3;
+int b=5;
+int *ptr1;
+int r;
+
+ptr=&a;
+ptr1=&b;
+cout<<*ptr<<*ptr1;
+r=swap(*ptr,*ptr1);
+}
+int swap(int ptr2,int ptr3)
+{
+int *ptr5,*ptr6;
+ ptr5=&ptr2;
+ ptr6=&ptr3;
+
+int temp=0;
+    temp=*ptr5;
+    *ptr5=*ptr6;
+    *ptr6=temp;
+cout<<*ptr5<<*ptr6;
+
+}

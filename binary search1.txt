@@ -1,0 +1,90 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int a[5];
+int mid;
+int no;
+int r;
+int count=0;
+int h;
+int r1;
+int t=0;
+
+for(int i=0;i<=4;i++)
+{
+cin>>a[i];
+}
+
+for(int i=0;i<=4;i++)
+{
+    for(int j=0;j<=3;j++)
+    {
+        if(a[j]>a[j+1])
+        {
+        t=a[j];
+        a[j]=a[j+1];
+        a[j+1]=t;
+        }
+    }
+}
+
+for(int i=0;i<=4;i++)
+{
+cout<<a[i];
+}
+cout<<"enter no";
+cin>>no;
+
+for(int i=0;i<=4;i++)
+{
+if(no==a[i])
+{
+
+h=i;
+
+}
+}
+cout<<endl;
+
+
+mid=4/2;
+for(int i=0;i<=4;i++)
+{
+if(no==a[mid])
+{
+
+    cout<<"found";
+    break;
+}
+else
+
+if(no<a[mid])
+{
+    r=(h+mid)/2;
+
+    if(no==a[r])
+
+        cout<<"found";
+        break;
+    }
+
+    else
+
+    if(no>a[mid])
+    {
+        r=(h+4)/2;
+
+    if(no==a[r])
+{
+        cout<<"found";
+        break;
+}
+    }
+
+}
+}
+
+
+
+
